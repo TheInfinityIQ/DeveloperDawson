@@ -1,0 +1,15 @@
+:root {
+    --primary: "rgb(225, 241, 253)";
+    --secondary: "rgb(193, 216, 240)";
+    --accent: "rgb(70, 99, 172)";
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+}
