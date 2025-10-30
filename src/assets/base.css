@@ -1,15 +1,60 @@
 :root {
-    --primary: "rgb(225, 241, 253)";
-    --secondary: "rgb(193, 216, 240)";
-    --accent: "rgb(70, 99, 172)";
+    --primary: rgb(11, 19, 33);
+    --secondary: rgb(22, 34, 59);
+    --neutral-light: rgb(230, 237, 247);
+    --neutral-mid: rgb(143, 161, 196);
+
+    --accent: rgb(58, 111, 242);
+    --accent-transparent: rgba(58, 111, 242, 0.25);
+    --accent-muted: rgb(39, 72, 143);
+    --accent-muted-transparent: rgba(39, 72, 143, 0.25);
 }
 
-p,
+.glass {
+    background: var(--accent-muted-transparent);
+    backdrop-filter: blur(16px) saturate(1.8);
+    -webkit-backdrop-filter: blur(16px) saturate(1.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.glass:hover {
+    background: var(--accent-transparent);
+}
+
+.glass:hover * {
+    color: white
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .glass {
+        background-color: var(--primary);
+    }
+}
+
+body {
+    background-color: var(--primary);
+}
+
+p {
+    color: var(--neutral-mid)
+}
+
+i {
+    color: var(--accent)
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    color: var(--primary);
+    color: var(--neutral-light)
+}
+
+* {
+    transition: ease-out 500ms;
 }
