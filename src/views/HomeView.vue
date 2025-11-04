@@ -204,7 +204,7 @@ import Panel from '@/components/Panel.vue';
 						class="w-full flex border rounded-3xl bg-[var(--secondary)] hover:bg-transparent project-card"
 					>
 						<a href="" class="flex place-content-center w-1/2">
-							<img src="src\assets\portfolio-image-temp.png " class="rounded-r-3xl" />
+							<img src="..\assets\portfolio-image-temp.png" class="rounded-r-3xl" />
 						</a>
 						<div class="w-1/2 h-auto p-4 flex flex-col justify-between">
 							<div>
@@ -277,7 +277,7 @@ import Panel from '@/components/Panel.vue';
 							purus eu lacus.
 						</p>
 						<a href="" class="flex place-content-center w-1/2"
-							><img src="src\assets\portfolio-image-temp.png" class="rounded-l-3xl"
+							><img src="..\assets\portfolio-image-temp.png" class="rounded-l-3xl"
 						/></a>
 					</div>
 				</div>
@@ -287,7 +287,7 @@ import Panel from '@/components/Panel.vue';
 						class="flex items-center w-full rounded-3xl border bg-[var(--secondary)] hover:bg-transparent project-card"
 					>
 						<a href="" class="flex place-content-center w-1/2"
-							><img src="src\assets\portfolio-image-temp.png" class="rounded-r-3xl"
+							><img src="..\assets\portfolio-image-temp.png" class="rounded-r-3xl"
 						/></a>
 						<p class="text-center w-1/2 px-2">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo orci,
