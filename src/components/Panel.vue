@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { ref, type Ref } from 'vue';
+import { ref, type Ref, useTemplateRef } from 'vue';
 
-const panelContent = document.getElementById('');
-
+const panelContent = useTemplateRef('panel-content');
 const isPanelOpen: Ref<boolean> = ref(false);
 
 const panelOpenOverflowClass: string = 'overflow-scroll ';
 const panelClosedOverflowClass: string = 'overflow-hidden ';
+
 let panelOverflowClass: Ref<string> = ref(panelClosedOverflowClass);
 let panelStateTimeout: number;
+
 function togglePanel() {
-	panelContent.focus;
+	if (!panelContent.value) {
+		return;
+	}
+
+	panelContent.value.focus;
 
 	clearTimeout(panelStateTimeout);
 	isPanelOpen.value = !isPanelOpen.value;
@@ -21,7 +26,10 @@ function togglePanel() {
 		}, 350);
 	} else {
 		panelStateTimeout = setTimeout(() => {
-			panelContent.scrollTop = 0;
+			if (!panelContent.value) {
+				return;
+			}
+			panelContent.value.scrollTop = 0;
 		}, 550);
 		panelOverflowClass.value = panelClosedOverflowClass;
 	}
@@ -43,7 +51,7 @@ function togglePanel() {
 			</h4>
 
 			<div
-				id="panel-content"
+				ref="panel-content"
 				class="bg-[var(--secondary)] overflow-hidden transform-transform duration-500 ease-in-out pr-2"
 				:class="`${isPanelOpen ? 'max-h-[250px] mt-4' : 'max-h-0'} ${panelOverflowClass}`"
 			>
