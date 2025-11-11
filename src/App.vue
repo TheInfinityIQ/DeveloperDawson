@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router';
 	<header class="flex items-center place-content-between m-4 h-24">
 		<div class="flex items-center">
 			<img src=".\assets\profile-photo.jpg" class="aspect-square h-24 rounded-full" />
-			<h1 class="font-bold ml-4 text-5xl">Developer Dawson</h1>
+			<h1 class="font-bold ml-4">Dawson Kelly</h1>
 		</div>
 		<div>
 			<nav class="flex gap-4">
